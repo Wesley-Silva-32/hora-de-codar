@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formas</title>
+
+<script>
+
+    // Função para calcular a área do retângulo
+function calcularAreaRetangulo(base, altura) {
+    return base * altura;
+}
+
+// Função para calcular a área do quadrado
+function calcularAreaQuadrado(lado) {
+    return lado * lado;
+}
+
+// Função para calcular a área do losango
+function calcularAreaLosango(diagonalMaior, diagonalMenor) {
+    return (diagonalMaior * diagonalMenor) / 2;
+}
+
+// Função para calcular a área do trapézio
+function calcularAreaTrapezio(baseMaior, baseMenor, altura) {
+    return ((baseMaior + baseMenor) * altura) / 2;
+}
+
+// Função para calcular a área do paralelogramo
+function calcularAreaParalelogramo(base, altura) {
+    return base * altura;
+}
+
+// Função para calcular a área do triângulo
+function calcularAreaTriangulo(base, altura) {
+    return (base * altura) / 2;
+}
+
+// Função para calcular a área do círculo
+function calcularAreaCirculo(raio) {
+    return Math.PI * Math.pow(raio, 2);
+}
+
+// Função principal que solicita os valores do usuário e exibe as áreas
+function calcularAreas() {
+    let forma = prompt("Escolha a forma para calcular a área (retângulo, quadrado, losango, trapézio, paralelogramo, triângulo, círculo):").toLowerCase();
+
+    switch (forma) {
+        case 'retângulo':
+        case 'retangulo':
+            let baseRet = parseFloat(prompt("Informe a base do retângulo:"));
+            let alturaRet = parseFloat(prompt("Informe a altura do retângulo:"));
+            alert("A área do retângulo é: " + calcularAreaRetangulo(baseRet, alturaRet));
+            break;
+        case 'quadrado':
+            let lado = parseFloat(prompt("Informe o valor do lado do quadrado:"));
+            alert("A área do quadrado é: " + calcularAreaQuadrado(lado));
+            break;
+        case 'losango':
+            let diagonalMaior = parseFloat(prompt("Informe o valor da diagonal maior do losango:"));
+            let diagonalMenor = parseFloat(prompt("Informe o valor da diagonal menor do losango:"));
+            alert("A área do losango é: " + calcularAreaLosango(diagonalMaior, diagonalMenor));
+            break;
+        case 'trapézio':
+        case 'trapezio':
+            let baseMaior = parseFloat(prompt("Informe a base maior do trapézio:"));
+            let baseMenor = parseFloat(prompt("Informe a base menor do trapézio:"));
+            let alturaTrap = parseFloat(prompt("Informe a altura do trapézio:"));
+            alert("A área do trapézio é: " + calcularAreaTrapezio(baseMaior, baseMenor, alturaTrap));
+            break;
+        case 'paralelogramo':
+            let basePar = parseFloat(prompt("Informe a base do paralelogramo:"));
+            let alturaPar = parseFloat(prompt("Informe a altura do paralelogramo:"));
+            alert("A área do paralelogramo é: " + calcularAreaParalelogramo(basePar, alturaPar));
+            break;
+        case 'triângulo':
+        case 'triangulo':
+            let baseTri = parseFloat(prompt("Informe a base do triângulo:"));
+            let alturaTri = parseFloat(prompt("Informe a altura do triângulo:"));
+            alert("A área do triângulo é: " + calcularAreaTriangulo(baseTri, alturaTri));
+            break;
+        case 'círculo':
+        case 'circulo':
+            let raio = parseFloat(prompt("Informe o valor do raio do círculo:"));
+            alert("A área do círculo é: " + calcularAreaCirculo(raio));
+            break;
+        default:
+            alert("Forma inválida!");
+    }
+}
+
+// Executar a função principal para iniciar o cálculo
+calcularAreas();
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>
